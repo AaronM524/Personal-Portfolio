@@ -57,8 +57,6 @@ const phrases = [
   "Web Developer",
   "Frontend Developer",
   "UI/UX Designer",
-  "Full Stack Developer",
-  "React Developer",
 ];
 
 let currentPhrase = 0;
@@ -92,3 +90,46 @@ function type() {
 
 // Start the typewriter effect
 type();
+
+
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Project filtering functionality
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+            if (filterValue === 'all') {
+                card.classList.remove('hidden');
+            } else {
+                if (card.getAttribute('data-category') === filterValue) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            }
+        });
+    });
+});
