@@ -525,7 +525,7 @@ html {
   /* About Section */
             .about-section {
                 padding: 120px 0;
-                background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #3a3a3a 100%);
+                background: rgb(0, 0, 0);
                 min-height: 100vh;
                 display: flex;
                 align-items: center;
