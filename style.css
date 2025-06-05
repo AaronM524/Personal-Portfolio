@@ -451,3 +451,263 @@ html {
         grid-template-columns: 1fr;
     }
 }
+
+        /* Bouncy Arrow Styles */
+        .scroll-arrow {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-arrow:hover {
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .arrow-icon {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 20px solid #ff6b6b;
+            margin: 0 auto 10px;
+        }
+
+        .arrow-text {
+            font-size: 0.9rem;
+            color: #ccc;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-15px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-7px);
+            }
+        }
+
+        /* Content section for scroll demonstration */
+        .content-section {
+            min-height: 100vh;
+            padding: 100px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+        }
+
+        .content-section h2 {
+            font-size: 3rem;
+            color: #4ecdc4;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .welcome-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .typewriter {
+                font-size: 1.2rem;
+            }
+        }
+
+  /* About Section */
+            .about-section {
+                padding: 120px 0;
+                background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #3a3a3a 100%);
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+            }
+
+            .about-header h2 {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #ff4757;
+                margin-bottom: 4rem;
+                text-align: center;
+                position: relative;
+            }
+
+            .about-header h2::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 4px;
+                background: linear-gradient(45deg, #ff4757, #ff6b7a);
+                border-radius: 2px;
+            }
+
+            .about-section p {
+                font-size: 1.2rem;
+                line-height: 1.8;
+                color: #e0e0e0;
+                margin-bottom: 3rem;
+            }
+
+            .stevens-logo {
+                max-width: 300px;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(255, 71, 87, 0.3);
+                transition: transform 0.3s ease;
+            }
+
+            .stevens-logo:hover {
+                transform: scale(1.05);
+            }
+
+            .stat-item {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 15px;
+                padding: 2rem;
+                margin: 1rem 0;
+                border: 1px solid rgba(255, 71, 87, 0.3);
+                transition: transform 0.3s ease;
+            }
+
+            .stat-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(255, 71, 87, 0.2);
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #ff4757;
+                margin-bottom: 0.5rem;
+            }
+
+            .stat-label {
+                font-size: 1rem;
+                color: #e0e0e0;
+            }
+
+            /* Skills Section */
+            .skills-section {
+                padding: 120px 0;
+                background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #0a0a0a 100%);
+                min-height: 100vh;
+            }
+
+            .skills-header h2 {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #ff4757;
+                margin-bottom: 4rem;
+                text-align: center;
+                position: relative;
+            }
+
+            .skills-header h2::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 4px;
+                background: linear-gradient(45deg, #ff4757, #ff6b7a);
+                border-radius: 2px;
+            }
+
+            .skill-card {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 71, 87, 0.3) !important;
+                border-radius: 20px !important;
+                padding: 2.5rem !important;
+                height: 100%;
+                transition: all 0.3s ease;
+                margin-bottom: 2rem;
+            }
+
+            .skill-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 40px rgba(255, 71, 87, 0.3);
+                border-color: rgba(255, 71, 87, 0.6) !important;
+            }
+
+            .skill-card i {
+                margin-bottom: 1.5rem !important;
+                transition: transform 0.3s ease;
+            }
+
+            .skill-card:hover i {
+                transform: scale(1.1);
+            }
+
+            .skill-name {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #ffffff;
+                margin-bottom: 1rem;
+            }
+
+            .skill-card p {
+                color: #e0e0e0;
+                line-height: 1.6;
+                font-size: 1rem;
+            }
+
+            /* Footer */
+            footer {
+                background: #0a0a0a !important;
+                padding: 2rem 0;
+                border-top: 1px solid rgba(255, 71, 87, 0.3);
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .welcome-content h1 {
+                    font-size: 2.5rem;
+                }
+
+                .typewriter {
+                    font-size: 1.2rem;
+                }
+
+                .about-header h2,
+                .skills-header h2 {
+                    font-size: 2.5rem;
+                }
+
+                .about-section,
+                .skills-section {
+                    padding: 80px 0;
+                }
+
+                .skill-card {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            /* Smooth scrolling */
+            html {
+                scroll-behavior: smooth;
+            }
+
+            /* Section spacing adjustments */
+            section {
+                position: relative;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }

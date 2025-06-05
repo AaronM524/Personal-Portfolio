@@ -91,7 +91,11 @@ function type() {
 // Start the typewriter effect
 type();
 
-
+function scrollDown() {
+    document.getElementById('about').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -133,3 +137,5 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+
